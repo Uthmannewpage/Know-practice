@@ -1,0 +1,117 @@
+/* banner.css */
+.banner {
+    position: relative;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 0; 
+    left: 10px; 
+    margin-right:50%;
+    color: purple;
+    font-size: 250%;
+    z-index: 1;
+}
+
+.banner > div > div > p {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-right: 62%;
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    z-index: 1;
+  }
+
+
+  #see-how-it-could-affect-you {
+    position: absolute;
+    top: 80%;
+    left: 10px;
+    margin-right: 62%;
+    background-image: url('https://www.knowpneumonia.com/images/btnwhite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%; 
+    height: 10%; 
+    z-index: 1;
+    text-indent: -9999px;
+    
+  }
+#see-how-it-could-affect-you:hover {
+    cursor: pointer;
+}
+
+#see-how-it-could-affect-you-1 {
+    position: absolute;
+    top: 80%;
+    left: 10px;
+    margin-right: 62%;
+    background-image: url('https://www.knowpneumonia.com/images/btnwhite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%; 
+    height: 10%; 
+    z-index: 1;
+    text-indent: -9999px;
+}
+
+#see-how-it-could-affect-you-1:hover {
+    cursor: pointer;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.slides-container {
+    position: relative;
+}
+
+.carousel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .prev {
+ 
+    left: 45%;
+  }
+  
+  .next {
+    right: 45%;
+  }
+
+
+  
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .banner h1 {
+        font-size: 50%; 
+    }
+
+    .banner > div > div > p {
+        font-size: 40%; 
+        top:20%
+    }
+
+    #see-how-it-could-affect-you {
+        top: 50%;
+    }
+
+    .carousel-container button {
+        font-size: 20%; 
+
+    }
+    
+    .prev{
+        left:40%;
+    }
+}

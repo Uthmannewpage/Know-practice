@@ -4,6 +4,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  top: 0px; /* Add top margin of 20px */
 }
 
 header nav {
@@ -30,16 +31,18 @@ header nav[aria-expanded="true"] {
   min-height: 100vh;
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) { /* Changed from (width >= 600px) */
   header nav {
     padding: 0 2rem;
   }
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) { /* Changed from (width >= 900px) */
   header nav {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Center header more */
+    height: var(--nav-height-big); /* Increase header height */
   }
 
   header nav[aria-expanded="true"] {
@@ -51,31 +54,28 @@ header nav[aria-expanded="true"] {
 header nav p {
   margin: 0;
   line-height: 1;
+  font-size: 24px; /* Increase font size for all text */
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: #783384;
+  font-size: 24px;
+  text-decoration: underline;
+
 }
 
-/* hamburger */
+
 header nav .nav-hamburger {
   grid-area: hamburger;
-  height: 22px;
+  height: 10px; /* Increase hamburger size */
   display: flex;
   align-items: center;
+  display: none;
 }
 
 header nav .nav-hamburger button {
-  height: 22px;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
-  overflow: initial;
-  text-overflow: initial;
-  white-space: initial;
+  height: 5px;
+  width: 2px;
 }
 
 header nav .nav-hamburger-icon,
@@ -84,72 +84,33 @@ header nav .nav-hamburger-icon::after {
   box-sizing: border-box;
   display: block;
   position: relative;
-  width: 20px;
-}
-
-header nav .nav-hamburger-icon::before,
-header nav .nav-hamburger-icon::after {
-  content: '';
-  position: absolute;
-  background: currentcolor;
+  width: 28px; /* Increase icon size */
 }
 
 header nav[aria-expanded="false"] .nav-hamburger-icon,
 header nav[aria-expanded="false"] .nav-hamburger-icon::before,
 header nav[aria-expanded="false"] .nav-hamburger-icon::after {
-  height: 2px;
-  border-radius: 2px;
-  background: currentcolor;
-}
-
-header nav[aria-expanded="false"] .nav-hamburger-icon::before {
-  top: -6px;
-}
-
-header nav[aria-expanded="false"] .nav-hamburger-icon::after {
-  top: 6px;
+  height: 4px; /* Increase height of lines */
 }
 
 header nav[aria-expanded="true"] .nav-hamburger-icon {
-  height: 22px;
+  height: 30px; /* Increase icon size */
 }
 
 header nav[aria-expanded="true"] .nav-hamburger-icon::before,
 header nav[aria-expanded="true"] .nav-hamburger-icon::after {
-  top: 3px;
-  left: 1px;
-  transform: rotate(45deg);
-  transform-origin: 2px 1px;
-  width: 24px;
-  height: 2px;
-  border-radius: 2px;
-}
-
-header nav[aria-expanded="true"] .nav-hamburger-icon::after {
-  top: unset;
-  bottom: 3px;
-  transform: rotate(-45deg);
-}
-
-@media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
+  width: 32px; /* Increase width of lines */
 }
 
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
+  flex-basis: 160px; /* Increase brand width */
+  font-size: var(--heading-font-size-m); /* Increase font size */
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  width: 160px; /* Increase brand image width */
 }
 
 /* sections */
@@ -170,23 +131,10 @@ header nav[aria-expanded="true"] .nav-sections {
 header nav .nav-sections ul  {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
-  font-weight: 500;
+  font-size: var(--body-font-size-m); /* Increase font size */
 }
 
-header nav .nav-sections ul > li {
-  font-weight: 700;
-}
-
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
-}
-
-header nav .nav-sections ul > li > ul > li {
-  font-weight: 500;
-}
-
-@media (width >= 900px) {
+@media (min-width: 900px) { /* Changed from (width >= 900px) */
   header nav .nav-sections {
     display: block;
     visibility: visible;
@@ -199,7 +147,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .nav-drop {
     position: relative;
-    padding-right: 16px;
+    padding-right: 20px; /* Increase padding */
     cursor: pointer;
   }
 
@@ -207,19 +155,19 @@ header nav .nav-sections ul > li > ul > li {
     content: '';
     display: inline-block;
     position: absolute;
-    top: .5em;
-    right: 2px;
+    top: .7em; /* Adjust position */
+    right: 4px; /* Adjust position */
     transform: rotate(135deg);
-    width: 6px;
-    height: 6px;
+    width: 8px; /* Increase arrow size */
+    height: 8px; /* Increase arrow size */
     border: 2px solid currentcolor;
-    border-radius: 0 1px 0 0;
     border-width: 2px 2px 0 0;
+    border-radius: 0 2px 0 0;
   }
 
   header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
     top: unset;
-    bottom: .5em;
+    bottom: .7em; /* Adjust position */
     transform: rotate(315deg);
   }
 
@@ -227,7 +175,7 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 2em;
     margin: 0;
-    font-size: var(--body-font-size-xs);
+    font-size: var(--body-font-size-s); /* Increase font size */
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -245,8 +193,8 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     position: absolute;
     left: -1em;
-    width: 200px;
-    margin-top: 12px;
+    width: 240px; /* Increase dropdown width */
+    margin-top: 16px; 
     padding: 1em;
     background-color: var(--light-color);
     white-space: initial;

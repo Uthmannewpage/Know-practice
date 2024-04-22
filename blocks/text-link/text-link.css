@@ -1,0 +1,27 @@
+.text-link {
+    text-align: center;
+  }
+  
+  .text-link h3 {
+    color: #363636;
+  }
+  
+  .text-link a {
+    color: #783384;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    text-decoration: underline;
+  }
+  
+  .text-link a:hover {
+    color: #c605a6;
+  }
+  
+  @media (max-width: 768px) {
+    .text-link {
+      width: 80%;
+      margin: 0 auto;
+      
+    }
+  }
+  

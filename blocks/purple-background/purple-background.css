@@ -1,0 +1,26 @@
+.purple-background {
+    background-color: #783384;
+    color: #fff;
+    padding:20px;
+  }
+  
+  .purple-background h3 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 28px;
+  }
+  
+  .purple-background a {
+    color: #fff;
+    text-decoration: underline;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .purple-background h3 {
+      font-size: 16px; 
+    }
+  }
+  

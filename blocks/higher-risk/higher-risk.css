@@ -1,0 +1,176 @@
+.higher-risk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #f3f1ed; /* Dark grey */
+    color: #010101; /* White text color */
+    padding: 20px; /* Add padding to space out elements */
+}
+
+.higher-risk > div {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure content is above background */
+}
+
+.higher-risk > div:first-child {
+    z-index: 1;
+}
+
+.higher-risk > div:first-child p {
+    position: absolute;
+    top: 50%; /* Position in the vertical center */
+    left: 10%; /* Position in the horizontal center */
+    transform: translate(-20%, -50%); /* Center the element */
+    background-image: url("https://www.knowpneumonia.com/images/arrow-new.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    color: purple; 
+    font-weight: bold; 
+    text-align: left; 
+    font-size: 28px;
+}
+
+.higher-risk > div:nth-child(2) h3 {
+    color: #363636; /* Color for '65 or older' */
+}
+
+.higher-risk > div:nth-child(2) div:nth-child(2),
+.higher-risk > div:nth-child(4) h3 {
+    color: #363636; /* Color for '19 or older' */
+}
+
+.higher-risk > div:nth-child(2) div:nth-child(2),
+.higher-risk > div:nth-child(4) div:nth-child(2) {
+    color: #630172; /* Color for 'even if you’re healthy' and 'with certain chronic conditions.' */
+}
+
+/* Styling for the "OR" circles */
+.higher-risk > div:nth-child(3) {
+    position: relative;
+}
+
+.higher-risk > div:nth-child(3)::before {
+    content: 'OR';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 55px;
+    border-radius: 50%;
+    background: #cccccc; /* Light grey */
+    color: #333333; /* Dark grey */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.higher-risk > div > div {
+    margin-bottom: 10px;
+}
+
+.higher-risk > div > div:last-child {
+    margin-bottom: 0;
+}
+
+.higher-risk h3 {
+    margin: 0;
+    font-size: 30.5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.higher-risk a {
+    color: #0066cc; /* Blue */
+    font-family: 'roboto slab', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.higher-risk a:hover {
+    text-decoration: underline;
+
+}
+
+.higher-risk > div > div:last-child a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: inline-block;
+    background: none; /* Remove any background color */
+    border: none; /* Remove any borders */
+}
+
+.higher-risk > div > div:last-child a {
+    display: inline-block;
+    background-image: url("https://www.knowpneumonia.com/images/find-out-more.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    text-indent: -9999px; /* Hide text */
+}
+
+.higher-risk .circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #cccccc; /* Light grey */
+    color: #333333; /* Dark grey */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16.5px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .higher-risk {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .higher-risk > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+  
+    .higher-risk > div:first-child p {
+        background-image: url("https://www.knowpneumonia.com/images/white-arrow-mobile.png");
+        background-size: 100% 200%; 
+        background-position: center bottom; /* Center the image horizontally and vertically */
+        width: 92vw; /* Set width to 100% of the viewport width */
+        height: 50vw; /* Let the browser calculate the height to maintain aspect ratio */
+        margin: 0;
+        top: 50%; /* Adjust top positioning to center vertically */
+        text-align: center;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    
+    
+    
+    .higher-risk > div:nth-child(2) {
+       margin-top: 70px;
+    }
+}
+
+    .higher-risk > div:last-child a {
+        background-image: url("https://www.knowpneumonia.com/images/find-out-more-mobile.png"); /* Adjust mobile image */
+    }

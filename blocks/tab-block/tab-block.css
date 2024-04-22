@@ -1,0 +1,60 @@
+.tab-block {
+    display: table;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-top: 20% ;
+  }.tab-block {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tab-block li {
+    display: inline-block;
+  }
+  
+  .tab-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .sublist {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sublist li {
+    display: block;
+  }
+  
+  
+  .tab-block li {
+    margin-right: 10px;
+  }
+  
+  .tab-block li:last-child {
+    margin-right: 0;
+  }
+  
+  .tab-block a {
+    text-decoration: none;
+    color: #000; /* Change color as needed */
+  }
+  
+  .tab-block a:hover {
+    color: #666; /* Change hover color as needed */
+    text-decoration: underline;
+  }
+
+  .tab-block-section {
+    display:none ; 
+  }
+  
+  

@@ -12,3 +12,65 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+
+/* New CSS for top section */
+.row1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer ul li {
+  margin-right: 30px; /* Adjust this value as needed */
+}
+
+.footer ul ul {
+  margin-top: 10px; /* Adjust this value as needed */
+}
+
+
+.footer ul {
+  color: #783384;
+  text-decoration: underline;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.footer ul a {
+  color: #783384;
+  text-decoration: underline;
+  margin-right: 20px; /* Adjust as needed */
+}
+.footer a {
+  color: #783384;
+  text-decoration: underline;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.footer-items:last-child {
+  margin-right: 0;
+}
+
+.language-switcher-locale-url {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-switcher-locale-url li {
+  display: inline-block;
+}
+
+.language-link {
+  color: #783384;
+  text-decoration: underline;
+}
+
+.language-link:hover {
+  color: darkorchid; /* Adjust color on hover as needed */
+  text-decoration: none;
+}
