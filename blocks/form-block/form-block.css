@@ -1,0 +1,155 @@
+/* Default styles */
+.form-block {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+ 
+    width: 50%; /* Set width to occupy half of the page */
+}
+
+.form-block p {
+  font-size: 25px;
+  font-weight: normal;
+}
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .form-block {
+        width: 100%; /* Allow the block to take full width on smaller screens */
+    }
+    
+    .form-block picture {
+        margin: 0 auto 10px auto; /* Center image horizontally and add margin below */
+    }
+    
+    .form-block div > div {
+        flex-direction: column; /* Stack image on top of text */
+        align-items: center; /* Center items horizontally */
+    }
+}
+
+/* Style checkboxes */
+input[type="checkbox"] {
+    transform: scale(1.5); /* Make checkboxes bigger */
+    margin-right: 5px; /* Add some spacing */
+    font-size: 25px;
+}
+
+/* Change default border color to green */
+input[type="checkbox"] + label {
+    border: 5px solid green;
+    font-size: 2em; /* Make text bigger */
+}
+
+/* Change border color to black when checked */
+input[type="checkbox"]:checked + label {
+    border-color: black; /* Change border color to black when checked */
+}
+
+/* Style text input and submit button */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+button {
+    width: 150%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 10px; /* Add some spacing */
+    box-sizing: border-box;
+    border: 2px solid black;
+    transition: border-color 0.3s ease; 
+    font-size: 20px;
+}
+
+/* Change border color to green when focused */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: green;
+}
+
+/* Style checkboxes when checked */
+input[type="checkbox"]:checked + label {
+    color: green; /* Change text color to green */
+}
+
+/* Style submit button */
+button {
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Change submit button color on hover */
+button:hover {
+    background-color: darkpurple;
+}
+
+
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .form-block {
+      width: 100%; /* Allow the block to take full width on smaller screens */
+    }
+  
+    /* Style checkboxes */
+    input[type="checkbox"] {
+      transform: scale(1.5); /* Make checkboxes bigger */
+      margin-right: 5px; /* Add some spacing */
+      font-size: 25px;
+    }
+  
+    /* Change default border color to green */
+    input[type="checkbox"] + label {
+      border: 5px solid green;
+      font-size: 2em; /* Make text bigger */
+    }
+  
+    /* Change border color to black when checked */
+    input[type="checkbox"]:checked + label {
+      border-color: black; /* Change border color to black when checked */
+    }
+  
+    /* Style text input and submit button */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    button {
+      width: 100%; /* Adjust width to take full width */
+      height: 60px;
+      padding: 10px;
+      margin-bottom: 10px; /* Add some spacing */
+      box-sizing: border-box;
+      border: 2px solid black;
+      transition: border-color 0.3s ease;
+      font-size: 20px;
+    }
+  
+    /* Change border color to green when focused */
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+      border-color: green;
+    }
+  
+    /* Style checkboxes when checked */
+    input[type="checkbox"]:checked + label {
+      color: green; /* Change text color to green */
+    }
+  
+    /* Style submit button */
+    button {
+      background-color: purple;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  
+    /* Change submit button color on hover */
+    button:hover {
+      background-color: darkpurple;
+    }
+  }

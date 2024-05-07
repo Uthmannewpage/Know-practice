@@ -37,7 +37,22 @@ export default function decorate(block) {
       child.prepend(arrowRight, arrow);
     } else {
       child.classList.add(index === blockLastIndex ? 'col-md-4' : 'col-md-3');
-      child.querySelector('.button').classList.add('append-right-arrow');
+      const findOutMoreButton = child.querySelector('.button');
+      if (findOutMoreButton) {
+        findOutMoreButton.classList.add('append-right-arrow');
+      }
+    }
+  });
+
+  // Lazy load images within the higher-risk block
+  lazyLoadImages();
+}
+
+function lazyLoadImages() {
+  const higherRiskImages = document.querySelectorAll('.higher-risk img');
+  higherRiskImages.forEach(img => {
+    if (!img.complete) {
+      img.loading = 'lazy';
     }
   });
 }

@@ -5,12 +5,18 @@
 
 .banner h1 {
     position: absolute;
-    top: 0; 
-    left: 10px; 
-    margin-right:50%;
+    top: 50%; 
+    left: 10px;
+    margin-right: 40%;
+    transform: translateY(-130%); 
     color: purple;
-    font-size: 250%;
+    font-size: 3vw;
+    font-weight: normal;
     z-index: 1;
+}
+.banner a {
+color:white;
+font-size: 70%;
 }
 
 .banner > div > div > p {
@@ -24,41 +30,41 @@
   }
 
 
-  #see-how-it-could-affect-you {
-    position: absolute;
-    top: 80%;
-    left: 10px;
-    margin-right: 62%;
-    background-image: url('https://www.knowpneumonia.com/images/btnwhite.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 30%; 
-    height: 10%; 
-    z-index: 1;
-    text-indent: -9999px;
-    
-  }
-#see-how-it-could-affect-you:hover {
-    cursor: pointer;
-}
-
+  #see-how-it-could-affect-you,
 #see-how-it-could-affect-you-1 {
     position: absolute;
     top: 80%;
     left: 10px;
     margin-right: 62%;
-    background-image: url('https://www.knowpneumonia.com/images/btnwhite.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: purple; 
+    color:white !important;
     width: 30%; 
     height: 10%; 
     z-index: 1;
-    text-indent: -9999px;
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center align text */
+    line-height: 50px; /* Adjust line height to center text vertically */
 }
 
+#see-how-it-could-affect-you:hover,
 #see-how-it-could-affect-you-1:hover {
     cursor: pointer;
 }
+
+#see-how-it-could-affect-you:before,
+#see-how-it-could-affect-you-1:before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute;
+    top: 0;
+    right: -20px; /* Adjust for arrow width */
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent; /* Height of the arrow */
+    border-bottom: 20px solid transparent; /* Height of the arrow */
+    border-left: 20px solid purple; /* Width of the arrow and color */
+    
+}
+
 
 .carousel-container {
     position: relative;
@@ -81,7 +87,8 @@
     font-size: 18px;
   }
   .prev {
- 
+
+    
     left: 45%;
   }
   
@@ -89,21 +96,44 @@
     right: 45%;
   }
 
+  .prev.selected,
+.next.selected {
+  background-color: rgb(87, 87, 87);
+  color: black; 
+}
+
 
   
+
+  @media screen and (min-width: 600px) and (max-width: 1023px) {
+    .banner h1 {
+        margin-right: 60%; /* Adjusted margin-right for middle screens */
+    }
+}
 /* Media Query for Mobile Devices */
 @media (max-width: 600px) {
     .banner h1 {
-        font-size: 50%; 
+        font-size: 100%; 
+        position: relative;
+        margin-right: 60%;
+        top:65vw;
+
+
     }
 
     .banner > div > div > p {
-        font-size: 40%; 
-        top:20%
+        font-size: 50%; 
+        top:70%
     }
 
     #see-how-it-could-affect-you {
-        top: 50%;
+        top: 95%;
+        margin-left: 20%;
+        width: 50%;
+        height: 20%;
+        font-size: 80%;
+        text-align:center;
+        z-index: 2;
     }
 
     .carousel-container button {

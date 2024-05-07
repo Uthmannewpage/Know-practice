@@ -16,10 +16,11 @@
 
 /* Style for the image */
 .b-mob-arrow img {
-    width: 200px; /* Make images take their full size */
+    width: 230px; /* Make images take their full size */
     height: auto;
     margin-right: 10px;
     padding-left: 20px;
+    
 }
 
 /* Style for the line between elements */
@@ -41,13 +42,13 @@
 
 /* Style for the text */
 .b-mob-arrow p {
-    font-size: 25px;
+    font-size: 35px;
     color: black;
     text-decoration: underline;
     background: none; /* Remove button background */
     border: none; /* Remove button border */
     padding: 0; /* Remove any padding */
-    margin-left: 20px; /* Remove any margin */
+    margin-left: 30px; /* Remove any margin */
     cursor: pointer; /* Ensure cursor is pointer on hover */
     word-wrap: break-word; /* Allow text to wrap within its container */
 }

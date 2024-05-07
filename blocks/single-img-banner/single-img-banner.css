@@ -1,0 +1,46 @@
+/* single-img-banner.css */
+
+.single-img-banner {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Ensure full width */
+}
+
+.single-img-banner h1 {
+    color: green;
+    font-size: 3vw;
+    font-weight: normal;
+    margin-right: 20px; /* Adjust margin between image and text */
+}
+
+.single-img-banner > div > div > p {
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    /* Adjust margin between image and text */
+}
+
+.single-img-banner img {
+    width: 100%; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.single-img-banner a {
+    color: purple;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .single-img-banner {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .single-img-banner h1 {
+        font-size: 60%;
+        margin-right: 0; /* Remove margin on small screens */
+    }
+
+    .single-img-banner > div > div > p {
+        font-size: 40%;
+        margin-right: 0; /* Remove margin on small screens */
+    }
+}

@@ -1,0 +1,109 @@
+/* Default styles */
+.card-sidebar {
+    position:absolute;
+    display:flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    padding: 20px;
+    margin-left: 50%; 
+    margin-right: -60%;
+    left:10%;
+    top:80%;
+   
+  }
+  
+  .card-sidebar > div {
+    display: flex; /* Make the div a flex container */
+    width: 100%; /* Take full width */
+    max-width: 50%; /* Limit maximum width of cards */
+    margin-bottom: 20px; /* Add margin between each card */
+    background-color: #f3f1ed; /* Set background color for each card */
+    padding: 15px; /* Add padding within each card */
+  }
+  
+  .card-sidebar > div > div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-sidebar > div > div:first-child {
+    margin-right: 10px;
+  }
+  
+  .card-sidebar picture {
+    width: 100%; /* Adjust the width of the image */
+    height: auto; /* Adjust the height of the image */
+    margin-bottom: 10px; /* Add margin between image and text */
+  }
+  
+  .card-sidebar h2,
+  .card-sidebar p {
+    margin: 0;
+  }
+  
+  .card-sidebar li {
+    list-style: none;
+    margin: 5px 0;
+  }
+  
+  .card-sidebar strong {
+    color: #6c2e73;
+    font-size: 25px;
+  }
+  
+  .card-sidebar em {
+    color: #363636;
+    font-size: 25px;
+  }
+  
+  .card-sidebar img + span {
+    color: #6c2e73;
+    font-size: 15px;
+  }
+  
+  .card-sidebar div> a {
+    color: #6c2e73;
+  }
+  
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+    .card-sidebar > div {
+      max-width: 100%; /* Allow cards to take full width on smaller screens */
+    }
+    
+    .card-sidebar picture {
+      margin: 0 auto 10px auto; /* Center image horizontally and add margin below */
+    }
+    
+    .card-sidebar > div > div {
+      flex-direction: column; /* Stack image on top of text */
+      align-items: center; /* Center items horizontally */
+    }
+  }
+  
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+  .card-sidebar {
+    position: relative; /* Remove absolute positioning */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    left: auto; /* Reset left position */
+    top: auto; /* Reset top position */
+    padding: 10px; /* Adjust padding */
+    width: 100%; /* Take full width */
+  }
+
+  .card-sidebar > div {
+    max-width: 100%; /* Allow cards to take full width on smaller screens */
+  }
+
+  .card-sidebar picture {
+    margin: 0 auto 10px auto; /* Center image horizontally and add margin below */
+  }
+
+  .card-sidebar > div > div {
+    flex-direction: column; /* Stack image on top of text */
+    align-items: center; /* Center items horizontally */
+  }
+}
+

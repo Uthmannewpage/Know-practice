@@ -3,16 +3,19 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: #f3f1ed; /* Dark grey */
-    color: #010101; /* White text color */
-    padding: 20px; /* Add padding to space out elements */
+    background-color: #f3f1ed; 
+    color: #010101; 
+    padding: 20px; 
+    top: -7vw;
+    width:90%;
+    z-index: 1;
 }
 
 .higher-risk > div {
     flex: 1;
     text-align: center;
     position: relative;
-    z-index: 2; /* Ensure content is above background */
+    z-index: 2; 
 }
 
 .higher-risk > div:first-child {
@@ -21,14 +24,14 @@
 
 .higher-risk > div:first-child p {
     position: absolute;
-    top: 50%; /* Position in the vertical center */
-    left: 10%; /* Position in the horizontal center */
-    transform: translate(-20%, -50%); /* Center the element */
+    top: 50%; 
+    left: 10%; 
+    transform: translate(-20%, -50%);
     background-image: url("https://www.knowpneumonia.com/images/arrow-new.png");
     background-size: contain; 
     background-repeat: no-repeat;
-    width: 300px;
-    height: 300px;
+    width: 340px;
+    height: 340px;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -38,24 +41,28 @@
     color: purple; 
     font-weight: bold; 
     text-align: left; 
-    font-size: 28px;
+    font-size: 38px;
 }
 
 .higher-risk > div:nth-child(2) h3 {
-    color: #363636; /* Color for '65 or older' */
+    color: #363636; 
+    font-size: 35px;
 }
 
 .higher-risk > div:nth-child(2) div:nth-child(2),
 .higher-risk > div:nth-child(4) h3 {
-    color: #363636; /* Color for '19 or older' */
+    color: #363636; 
+    font-size: 35px;
 }
 
 .higher-risk > div:nth-child(2) div:nth-child(2),
 .higher-risk > div:nth-child(4) div:nth-child(2) {
-    color: #630172; /* Color for 'even if you’re healthy' and 'with certain chronic conditions.' */
+    color: #630172;
+    font-size: 25px;
 }
 
-/* Styling for the "OR" circles */
+
+
 .higher-risk > div:nth-child(3) {
     position: relative;
 }
@@ -69,8 +76,8 @@
     width: 54px;
     height: 55px;
     border-radius: 50%;
-    background: #cccccc; /* Light grey */
-    color: #333333; /* Dark grey */
+    background: #cccccc; 
+    color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,17 +95,17 @@
 
 .higher-risk h3 {
     margin: 0;
-    font-size: 30.5px;
+    font-size: 35px;
     font-weight: 600;
     text-align: center;
 }
 
 .higher-risk a {
-    color: #0066cc; /* Blue */
+    color: #0066cc;
     font-family: 'roboto slab', sans-serif;
     font-size: 18px;
     font-weight: 700;
-    text-decoration: none;
+  
 }
 
 .higher-risk a:hover {
@@ -106,23 +113,19 @@
 
 }
 
-.higher-risk > div > div:last-child a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    display: inline-block;
-    background: none; /* Remove any background color */
-    border: none; /* Remove any borders */
-}
+
 
 .higher-risk > div > div:last-child a {
     display: inline-block;
-    background-image: url("https://www.knowpneumonia.com/images/find-out-more.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-color: purple; 
+    border-radius: 10px;
     width: 200px; /* Adjust width as needed */
-    height: auto; /* Adjust height as needed */
-    text-indent: -9999px; /* Hide text */
+    padding: 10px; /* Add padding for spacing */
+    color: white; /* Set text color to white */
+    text-decoration: none;
 }
+
+
 
 .higher-risk .circle {
     width: 46px;
